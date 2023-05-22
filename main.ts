@@ -1,5 +1,5 @@
 
-function foo(bar: string | undefined, baz: string) {
+function foo(bar: boolean | undefined, baz: string) {
   return bar || baz;
 }
 
