@@ -1,13 +1,9 @@
-function foo(bar: boolean | undefined, baz: boolean) {
-  const qux = bar || baz;
-  return qux;
+export interface Query {
+  sort: string | undefined
 }
 
-type Bar = {
-  bar: boolean
-};
-
-function foo2(bar: Bar | undefined, baz: boolean) {
-  const qux = bar?.bar || baz;
-  return qux;
+function hasVisualizationParams(view: string | undefined, query?: Query) {
+  return Boolean(query?.['sort'] || view);
 }
+
+hasVisualizationParams('foo', { sort: 'bar' });
