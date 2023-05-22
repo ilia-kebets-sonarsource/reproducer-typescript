@@ -1,3 +1,10 @@
+
+function foo(bar: string | undefined, baz: string) {
+  return bar || baz;
+}
+
+foo('12', '42');
+
 export interface Perspective {
   sort?: string;
   view?: string;
